@@ -10,8 +10,12 @@
 .readout{width:310px;min-width:310px;padding:25px;border:1px solid var(--line);background:rgba(9,22,18,.7);box-shadow:0 20px 60px rgba(0,0,0,.22);backdrop-filter:blur(7px)}.readout-top{display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.2em;font-weight:bold;padding-bottom:21px;border-bottom:1px solid var(--line)}.readout-icon{font-size:16px;color:#cddab6}.readout dl{display:grid;gap:19px;margin:25px 0}.readout dl div{min-width:0}.readout dt{font-size:9px;color:#a0b3a7;letter-spacing:.25em;margin-bottom:7px}.readout dd{margin:0;font-size:13px;letter-spacing:.06em;font-weight:bold;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}[hidden]{display:none!important}
 .staff-roster{border-top:1px solid var(--line);padding-top:18px;margin-top:5px;margin-bottom:18px}
 .staff-heading{font-size:11px;font-weight:700;letter-spacing:.18em;color:#e0e9d8;margin-bottom:17px}
-.staff-people{font-size:12px;line-height:1.5;color:#f5f6ec;font-weight:700;overflow-wrap:anywhere}
-.staff-person{display:block}
+.staff-people{font-size:12px;line-height:1.4;color:#f5f6ec;overflow-wrap:anywhere}
+.staff-person{display:block;border-left:2px solid rgba(205,221,182,.5);padding:0 0 0 10px;margin:0 0 12px}
+.staff-person:last-child{margin-bottom:0}
+.staff-in-game{display:inline;font-size:12px;font-weight:700;color:#f5f6ec}
+.staff-owner{display:inline-block;font-size:9px;letter-spacing:.08em;font-weight:700;color:#d5deb9;margin-left:8px;vertical-align:1px}
+.staff-steam{display:block;font:10px/1.6 Consolas,'Courier New',monospace;color:#b4c5b8;margin-top:1px}
 .readout-bottom{font-family:Consolas,monospace;font-size:10px;color:#b9c9b1;letter-spacing:.14em;padding-top:19px;margin:0;border-top:1px solid var(--line)}
 .footer{z-index:4;position:absolute;bottom:37px;left:clamp(24px,5vw,86px);right:clamp(24px,5vw,86px)}.statusline,.bottomline{display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:Consolas,'Courier New',monospace}.statusline{font-size:12px;letter-spacing:.1em;font-weight:bold}.statusline-left{display:flex;align-items:center;gap:13px}.statusline #fileCount{color:#c4cfbd;font-size:10px;white-space:nowrap}.loader{width:12px;height:12px;border:2px solid rgba(215,235,202,.25);border-top-color:#dee6c8;border-radius:50%;animation:spin 1.1s linear infinite;flex:none}@keyframes spin{to{transform:rotate(360deg)}}
 .progress-track{height:5px;margin:17px 0 13px;background:rgba(215,230,203,.2);border:1px solid rgba(220,237,215,.18);overflow:hidden;position:relative}.progress-fill{height:100%;width:0;background:#d6e2bf;transition:width .35s ease}.indeterminate .progress-fill{position:absolute;width:22%;animation:scan 2.2s ease-in-out infinite}@keyframes scan{0%{left:-25%}100%{left:105%}}
