@@ -39,5 +39,8 @@ if(staffBox&&staffRoot&&Array.isArray(names)){
   staffBox.appendChild(item);
   staffRoot.hidden=false;
  });
+ if(!staffRoot.hidden&&staffRoot.parentNode){
+  staffRoot.parentNode.classList.add('has-staff');
+ }
 }
 })();
