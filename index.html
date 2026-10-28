@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1210">
+<title>Grunt Gaming — Connecting</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/scene-01.webp">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+<div id="backA" class="background active" style="background-image:url('assets/scene-01.webp')" aria-hidden="true"></div>
+<div id="backB" class="background" aria-hidden="true"></div>
+<div class="overlay" aria-hidden="true"></div>
+<div class="upper-rule" aria-hidden="true"></div>
+<header class="header">
+ <div class="brand"><span class="brand-emblem">GG</span><div class="brand-label"><strong>GRUNT GAMING</strong><small>HALO ROLEPLAY</small></div></div>
+ <div class="connection"><span class="pulse"></span><div><strong>CONNECTING</strong><small>GARRY'S MOD</small></div></div>
+</header>
+<main class="main">
+ <section class="intro">
+  <span class="kicker"><i></i>UNSC NETWORK / 117</span>
+  <h1>GRUNT<br><span>GAMING</span></h1>
+  <div class="short-rule"></div>
+  <p class="server-type">HALO ROLEPLAY SERVER</p>
+  <p class="image-count">BACKGROUND <span id="slideIndex">01 / 07</span></p>
+ </section>
+ <aside class="readout">
+  <div class="readout-top"><span>SERVER DETAILS</span><span class="readout-icon">◆</span></div>
+  <dl>
+   <div><dt>SERVER</dt><dd id="serverName">GRUNT GAMING</dd></div>
+   <div><dt>MAP</dt><dd id="mapName">LOADING…</dd></div>
+   <div><dt>GAMEMODE</dt><dd id="gameMode">HALO ROLEPLAY</dd></div>
+  </dl>
+  <p class="readout-bottom">LOADING SERVER CONTENT</p>
+ </aside>
+</main>
+<footer class="footer">
+ <div class="statusline"><span class="statusline-left"><span class="loader"></span><span id="statusText">CONNECTING TO SERVER…</span></span><span id="fileCount">PREPARING</span></div>
+ <div id="progressTrack" class="progress-track indeterminate" role="progressbar" aria-label="Downloading server files" aria-valuemin="0" aria-valuemax="100"><div id="progressFill" class="progress-fill"></div></div>
+ <div class="bottomline"><span id="fileName">INITIALIZING SESSION</span><span>GRUNT GAMING / UNSC</span></div>
+</footer>
+</body>
+</html>
