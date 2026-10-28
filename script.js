@@ -17,11 +17,25 @@ var roster=window.GruntGamingStaff||{};
 var names=roster.superadmins;
 var staffBox=byId('superadminsNames'),staffRoot=byId('staffRoster');
 if(staffBox&&staffRoot&&Array.isArray(names)){
- names.forEach(function(name){
-  if(typeof name!=='string'||!name.trim())return;
-  var item=document.createElement('span');
+ names.slice(0,4).forEach(function(person){
+  if(!person||typeof person.inGame!=='string'||typeof person.steam!=='string')return;
+  if(!person.inGame.trim()||!person.steam.trim())return;
+  var item=document.createElement('div');
   item.className='staff-person';
-  item.textContent=name.trim().slice(0,80);
+  var gameName=document.createElement('span');
+  gameName.className='staff-in-game';
+  gameName.textContent=person.inGame.trim().slice(0,75);
+  item.appendChild(gameName);
+  if(person.owner===true){
+   var role=document.createElement('span');
+   role.className='staff-owner';
+   role.textContent='OWNER';
+   item.appendChild(role);
+  }
+  var steamName=document.createElement('span');
+  steamName.className='staff-steam';
+  steamName.textContent='Steam: '+person.steam.trim().slice(0,75);
+  item.appendChild(steamName);
   staffBox.appendChild(item);
   staffRoot.hidden=false;
  });
