@@ -3,7 +3,7 @@ var backgrounds=['assets/scene-01.webp','assets/scene-02.webp','assets/scene-03.
 var index=0,frontA=true,total=null,needed=null;
 function byId(x){return document.getElementById(x)}
 function preload(i){var image=new Image();image.src=backgrounds[i]}
-function rotate(){var next=(index+1)%backgrounds.length,enter=byId(frontA?'backB':'backA'),leave=byId(frontA?'backA':'backB');enter.style.backgroundImage='url("'+backgrounds[next]+'")';enter.classList.add('active');leave.classList.remove('active');index=next;frontA=!frontA;byId('slideIndex').textContent=String(index+1).padStart(2,'0')+' / 07';preload((next+1)%backgrounds.length)}
+function rotate(){var next=(index+1)%backgrounds.length,enter=byId(frontA?'backB':'backA'),leave=byId(frontA?'backA':'backB');enter.style.backgroundImage='url("'+backgrounds[next]+'")';enter.classList.add('active');leave.classList.remove('active');index=next;frontA=!frontA;preload((next+1)%backgrounds.length)}
 preload(1);setInterval(rotate,8500);
 try{var p=new URLSearchParams(location.search);var m=p.get('map');if(m&&/^[a-zA-Z0-9_-]{1,80}$/.test(m))byId('mapName').textContent=m}catch(e){}
 function update(){if(total===null||needed===null||total<=0)return;var n=Math.min(total,Math.max(0,needed)),done=total-n,percent=Math.round(done/total*100);byId('progressTrack').classList.remove('indeterminate');byId('progressTrack').setAttribute('aria-valuenow',String(percent));byId('progressFill').style.width=percent+'%';byId('fileCount').textContent=done+' / '+total+' FILES'}
