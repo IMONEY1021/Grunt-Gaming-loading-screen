@@ -12,4 +12,22 @@ window.SetFilesTotal=function(n){n=Number(n);if(Number.isFinite(n)&&n>0){total=M
 window.SetFilesNeeded=function(n){n=Number(n);if(Number.isFinite(n)&&n>=0){needed=Math.floor(n);update()}};
 window.SetStatusChanged=function(s){if(s)byId('statusText').textContent=String(s).toUpperCase().slice(0,130)};
 window.DownloadingFile=function(f){if(f){var n=String(f).replace(/\\/g,'/').split('/').pop();byId('fileName').textContent='DOWNLOADING: '+n.slice(0,100)}};
+
+function publishStaffRow(groupId,namesId,names){
+ var group=byId(groupId),box=byId(namesId),root=byId('staffRoster');
+ if(!group||!box||!root||!Array.isArray(names)||!names.length)return;
+ var count=0;
+ names.forEach(function(name){
+  if(typeof name!=='string'||!name.trim())return;
+  var item=document.createElement('span');
+  item.className='staff-person';
+  item.textContent=name.trim().slice(0,80);
+  box.appendChild(item);
+  count++;
+ });
+ if(count){group.hidden=false;root.hidden=false}
+}
+var roster=window.GruntGamingStaff||{};
+publishStaffRow('communityManagerRow','communityManagerNames',roster.communityManager);
+publishStaffRow('superadminsRow','superadminsNames',roster.superadmins);
 })();
