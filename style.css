@@ -10,8 +10,6 @@
 .readout{width:310px;min-width:310px;padding:25px;border:1px solid var(--line);background:rgba(9,22,18,.7);box-shadow:0 20px 60px rgba(0,0,0,.22);backdrop-filter:blur(7px)}.readout-top{display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.2em;font-weight:bold;padding-bottom:21px;border-bottom:1px solid var(--line)}.readout-icon{font-size:16px;color:#cddab6}.readout dl{display:grid;gap:19px;margin:25px 0}.readout dl div{min-width:0}.readout dt{font-size:9px;color:#a0b3a7;letter-spacing:.25em;margin-bottom:7px}.readout dd{margin:0;font-size:13px;letter-spacing:.06em;font-weight:bold;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}[hidden]{display:none!important}
 .staff-roster{border-top:1px solid var(--line);padding-top:18px;margin-top:5px;margin-bottom:18px}
 .staff-heading{font-size:11px;font-weight:700;letter-spacing:.18em;color:#e0e9d8;margin-bottom:17px}
-.staff-role-group{margin-top:14px}
-.staff-role{font-size:9px;letter-spacing:.17em;color:#a0b3a7;margin-bottom:6px}
 .staff-people{font-size:12px;line-height:1.5;color:#f5f6ec;font-weight:700;overflow-wrap:anywhere}
 .staff-person{display:block}
 .readout-bottom{font-family:Consolas,monospace;font-size:10px;color:#b9c9b1;letter-spacing:.14em;padding-top:19px;margin:0;border-top:1px solid var(--line)}
